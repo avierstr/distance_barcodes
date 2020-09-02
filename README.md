@@ -3,15 +3,25 @@ This script calculates the **Levenshtein distance** between barcodes and looks f
 
 **How it works:**
 I have done the following: 
+
 Take barcodes with forward distances > 17:
+
 BC10 - BC36 : 18
+
 BC10 - BC65 : 18
+
 BC11 - BC44 : 19
+
 BC19 - BC44 : 18
+
 BC36 - BC44 : 18
+
 BC43 - BC44 : 18
+
 BC44 - BC81 : 18
+
 BC44 - BC87 : 18
+
 barcode pool: ['BC10', 'BC11', 'BC19', 'BC36', 'BC43', 'BC44', 'BC65', 'BC81', 'BC87']
 
 Compare all possible combinations of this pool: the distance of BC10-BC11, BC10-BC44, BC10-BC81, BC10-BC87, ... BC44-BC65.  If one of those couples is lower than 17, check which of the 2 barcodes is resulting in less barcodes at the end of the comparisons.  
